@@ -42,7 +42,7 @@ export default function TextForm(props) {
           }}
         ></textarea>
       </div>
-      <button className="btn btn-primary mx-1" onClick={handleUpClick}>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>
         Convert to Upper Case
       </button>
       <button
@@ -51,16 +51,16 @@ export default function TextForm(props) {
       >
         Count
       </button>
-      <button className="btn btn-primary mx-1" onClick={handleClear}>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleClear}>
         Clear
       </button>
-      <button className="btn btn-primary mx-1" onClick={handleCopy}>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>
         Copy
       </button>
 
       <div className="container my-2">
         <p>
-          {Text !== "" ? Text.split(" ").length : 0} - words and {Text.length} -
+          {Text !== "" ? Text.split(" ").filter((element) => { return element.length !==0}).length : 0} - words and {Text.length} -
           characters
         </p>
       </div>
